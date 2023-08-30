@@ -14,7 +14,7 @@ function loginSubmitHandler(event) {
 }
 
 function paintGreeting(user) {
-    greeting.innerHTML = `Hi ${user}`;//it will show hi with the user's name
+    greeting.innerText = `Hi ${user}`;//it will show hi with the user's name
     greeting.classList.remove(HIDDEN_CLASSNAME); //to show greeting item after the form is gone
 }  //those two lines were repeated. so make it a function and replace repeating in loginSubmit to this function
 
