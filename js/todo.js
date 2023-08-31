@@ -2,6 +2,7 @@ const todoForm = document.querySelector(".todo__form");
 const todoInput = document.querySelector(".todo__input");
 const todoList = document.querySelector(".todo__list");
 
+const TODOS_KEY = "todos";
 const todos = [];
 
 function saveTodos() {
@@ -34,3 +35,5 @@ function handleTodoSubmit(event) {
 }
 
 todoForm.addEventListener("submit", handleTodoSubmit);
+const savedTodos = localStorage.getItem(TODOS_KEY);
+console.log(saveTodos);
