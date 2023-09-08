@@ -3,7 +3,7 @@ const todoInput = document.querySelector(".todo__input");
 const todoList = document.querySelector(".todo__list");
 
 const TODOS_KEY = "todos";
-const todos = [];
+let todos = [];
 
 function saveTodos() {
     localStorage.setItem("todos", JSON.stringify(todos)); //to save todo items in localSrotage as an array shape
@@ -11,6 +11,8 @@ function saveTodos() {
 function deleteTodo(event) {
     const li = event.target.parentElement; // to delete, target the parent of the button 
     li.remove();
+    todos = todos.filter((todo) => todo.id !== parseInt(li.id));
+    saveTodos();
 }
 
 function paintTodo(newTodo) {
