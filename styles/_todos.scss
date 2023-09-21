@@ -1,0 +1,59 @@
+.todos {
+    border: 1px solid teal;
+    grid-area: 4 / 2 / 5 / 3;
+
+    &__input {
+        border: none;
+        outline: none;
+        text-align: center;
+        background-color: transparent;
+        font-size: 26px;
+        font-family: $font;
+        font-size: 700;
+        color: $font-color;
+    }
+
+    &__input::placeholder {
+        color: $font-color;
+        font-family: $font;
+        font-size: 26px;
+    }
+
+    &__list {
+        list-style: none;
+        font-size: 24px;
+        border: 1px solid palevioletred;
+        grid-area: 5 / 2 / 6 / 3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__list li {
+        border: 1px solid rgb(126, 112, 216);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+    }
+
+    &__list button {
+        border: 2px solid rgba(255, 255, 255, 0);
+        margin-left: 10px;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        font-size: 22px;
+        text-transform: uppercase;
+        font-family: $font;
+        color: $font-color;
+        background-color: transparent;
+    }
+
+    &__list button:hover {
+        cursor: pointer;
+        border: 2px solid rgba(255, 255, 255, 0.728);
+        border-radius: 50px;
+    }
+}

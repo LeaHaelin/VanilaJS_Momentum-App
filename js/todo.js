@@ -1,6 +1,6 @@
-const todoForm = document.querySelector(".todo__form");
-const todoInput = document.querySelector(".todo__input");
-const todoList = document.querySelector(".todo__list");
+const todoForm = document.querySelector(".todos");
+const todoInput = document.querySelector(".todos__input");
+const todoList = document.querySelector(".todos__list");
 
 const TODOS_KEY = "todos";
 let todos = [];
@@ -21,7 +21,7 @@ function paintTodo(newTodo) {
     const todoSpan = document.createElement("span");
     todoSpan.innerText = newTodo.text;
     const todoBTN = document.createElement("button");
-    todoBTN.innerText = "x";
+    todoBTN.innerText = "ˣ";
     todoBTN.addEventListener("click", deleteTodo);
     todoLi.appendChild(todoSpan); // to add todoSpan in todoLi as a child
     todoLi.appendChild(todoBTN); // to add todoButton in todoLi as a child

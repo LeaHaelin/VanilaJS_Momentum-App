@@ -1,0 +1,23 @@
+.login,
+.greeting {
+    border: 1px solid rgb(160, 129, 160);
+    grid-area: 3 / 2 / 4 / 3;
+
+    &__input {
+        border: none;
+        border-bottom: 2px solid $font-color;
+        outline: none;
+        text-align: center;
+        background-color: transparent;
+        font-size: 26px;
+        font-family: $font;
+        font-size: 700;
+        color: $font-color;
+    }
+
+    &__input::placeholder {
+        color: $font-color;
+        font-family: $font;
+        font-size: 26px;
+    }
+}
