@@ -23,12 +23,13 @@
           placeholder="What's your name?"
         />
       </form>
-      <h1 class="greeting" class="hidden"></h1>
+      <h1 class="greeting hidden"></h1>
       <form action="#" class="todos">
         <input
           class="todos__input"
           type="text"
           placeholder="Write your TODOS"
+          maxlength="20"
           required
         />
       </form>
@@ -39,11 +40,12 @@
         <p class="quote__author"></p>
       </section>
     </div>
+    <script src="./js/data.js" type="module"></script>
     <script src="./js/login.js"></script>
     <script src="./js/clock.js"></script>
     <script src="./js/quotes.js"></script>
-    <script src="./js/background.js"></script>
+    <script src="./js/background.js" type="module"></script>
     <script src="./js/todo.js"></script>
-    <script src="./js/weather.js"></script>
+    <script src="./js/weather.js" type="module"></script>
   </body>
 </html>

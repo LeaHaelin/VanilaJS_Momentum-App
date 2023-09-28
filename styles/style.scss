@@ -3,8 +3,8 @@ $font: 'Roboto', sans-serif;
 $font-color: #ffffff;
 
 *,
-::before,
-::after {
+*::before,
+*::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -16,6 +16,7 @@ body {
     height: 100%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    overflow: hidden;
 }
 
 .wrapper {
@@ -25,8 +26,8 @@ body {
     font-family: $font;
     color: $font-color;
     display: grid;
-    grid-template-columns: 20% 1fr 20%;
-    grid-template-rows: 10% repeat(2, 1fr) auto auto 1% 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 10% repeat(4, auto) 1% auto;
     grid-column-gap: 0px;
     grid-row-gap: 20px;
     text-align: center;
@@ -41,6 +42,13 @@ hr {
     width: 100%;
     margin-bottom: 10px;
     grid-area: 6 / 1 / 7 / 4;
+}
+
+@media(min-width:560px) {
+    .wrapper {
+        min-width: 560px;
+        grid-template-columns: 20% 1fr 20%;
+    }
 }
 
 @import "_weather.scss";

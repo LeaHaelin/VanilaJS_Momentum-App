@@ -1,5 +1,9 @@
-const images = ["bg-1.jpeg", "bg-2.jpeg", "bg-3.jpeg", "bg-4.jpeg", "bg-5.jpeg"];
-const randomImage = images[Math.floor(Math.random() * images.length)];
+import { config } from './data.js';
 
-
-document.body.style.backgroundImage = `url(images/${randomImage})`;
+const bodyEl = document.querySelector("body");
+async function getPhotos() {
+    const response = await fetch(`https://api.unsplash.com/photos/random?client_id=${config.unsplashKey}`);
+    const images = await response.json();
+    bodyEl.style.backgroundImage = `url('${images.urls.full}')`
+}
+getPhotos()

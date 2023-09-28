@@ -2,5 +2,19 @@
     border: 1px solid orange;
     text-align: center;
     font-weight: 100;
+    font-size: 14px;
+    text-shadow: 1px 1px 2px gray;
     grid-area: 7 / 2 / 8 / 3;
+
+    &__author {
+        margin: 8px 0px;
+        color: rgba(255, 255, 255, 0.665);
+        font-style: italic;
+    }
+}
+
+@media(min-width:560px) {
+    .quote {
+        font-size: 24px;
+    }
 }
